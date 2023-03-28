@@ -14,19 +14,19 @@ public class Clock {
         return considerShorterAngleAndReturnIt(angleDifference);
     }
 
-    public int findPositionOfHourHand(int hour) {
+    private int findPositionOfHourHand(int hour) {
         return (hour * fullAngle) / hourNotation24hours;
     }
 
-    public int findPositionOfMinutesHand(int minute) {
+    private int findPositionOfMinutesHand(int minute) {
         return (minute * fullAngle) / (totalMinutes);
     }
 
-    public int calculateAngleDifference(int hour, int minute) {
+    private int calculateAngleDifference(int hour, int minute) {
         return Math.abs(hour - minute);
     }
 
-    public int considerShorterAngleAndReturnIt(int angle) {
+    private int considerShorterAngleAndReturnIt(int angle) {
         if (angle > halfAngle) {
             angle = fullAngle - angle;
         }
