@@ -5,18 +5,13 @@ class Clock {
     public static int hourNotation24hours = 12;
 
     public static int returnClockAngle(int hour, int minute) {
-        Clock clock = new Clock();
-
         int hourConverted = hour % hourNotation24hours;
 
-        int h = clock.findPositionOfHourHand(hourConverted);
-        int m = clock.findPositionOfMinutesHand(minute);
+        int h = findPositionOfHourHand(hourConverted);
+        int m = findPositionOfMinutesHand(minute);
+        int angleDifference = calculateAngleDifference(h, m);
 
-        int angleDifference = clock.calculateAngleDifference(h, m);
-
-        int angle = clock.considerShorterAngleAndReturnIt(angleDifference);
-
-        return angle;
+        return considerShorterAngleAndReturnIt(angleDifference);
     }
 
     public static int findPositionOfHourHand(int hour) {
