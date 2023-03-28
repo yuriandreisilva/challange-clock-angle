@@ -1,8 +1,8 @@
 public class Clock {
-    public int halfAngle = 180;
-    public int fullAngle = 360;
-    public int totalMinutes = 60;
-    public int hourNotation24hours = 12;
+    private int halfAngle = 180;
+    private int fullAngle = 360;
+    private int totalMinutes = 60;
+    private int hourNotation24hours = 12;
 
     public int returnClockAngle(int hour, int minute) {
         int hourConverted = hour % hourNotation24hours;
