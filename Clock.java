@@ -1,10 +1,10 @@
 class Clock {
-    public static int halfAngle = 180;
-    public static int fullAngle = 360;
-    public static int totalMinutes = 60;
-    public static int hourNotation24hours = 12;
+    public int halfAngle = 180;
+    public int fullAngle = 360;
+    public int totalMinutes = 60;
+    public int hourNotation24hours = 12;
 
-    public static int returnClockAngle(int hour, int minute) {
+    public int returnClockAngle(int hour, int minute) {
         int hourConverted = hour % hourNotation24hours;
 
         int h = findPositionOfHourHand(hourConverted);
@@ -14,19 +14,19 @@ class Clock {
         return considerShorterAngleAndReturnIt(angleDifference);
     }
 
-    public static int findPositionOfHourHand(int hour) {
+    public int findPositionOfHourHand(int hour) {
         return (hour * fullAngle) / hourNotation24hours;
     }
 
-    public static int findPositionOfMinutesHand(int minute) {
+    public int findPositionOfMinutesHand(int minute) {
         return (minute * fullAngle) / (totalMinutes);
     }
 
-    public static int calculateAngleDifference(int hour, int minute) {
+    public int calculateAngleDifference(int hour, int minute) {
         return Math.abs(hour - minute);
     }
 
-    public static int considerShorterAngleAndReturnIt(int angle) {
+    public int considerShorterAngleAndReturnIt(int angle) {
         if (angle > halfAngle) {
             angle = fullAngle - angle;
         }
