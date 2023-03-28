@@ -1,4 +1,4 @@
-class Clock {
+public class Clock {
     public int halfAngle = 180;
     public int fullAngle = 360;
     public int totalMinutes = 60;
