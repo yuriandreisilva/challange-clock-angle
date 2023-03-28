@@ -27,6 +27,6 @@ public class Main {
 
         result = clock.returnClockAngle(hour, minute);
 
-        System.out.printf("O ângulo para a hora é: " + result + "º graus.");
+        System.out.printf("O ângulo para a hora e minuto informado é: " + result + "º graus.");
     }
 }
